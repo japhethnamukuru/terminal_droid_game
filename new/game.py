@@ -6,6 +6,7 @@ from bot import Bot
 vilains = ['X', 'Y', 'Z']
 droids = ['Octa', "Neo", "Alpha"]
 
+#new droid generator function
 def newDroid():
     droid = random.choice(droids)
     new_droid = Bot(droid)
@@ -26,9 +27,11 @@ def getGame():
             print("Select villain from given choices.")
             continue
         else:
+            #generate a new villain
             new_vilain = Bot(vilain)
             
             if new_vilain:
+                #generate a new droid
                 new_droid = newDroid()
                 print("Communist Detected, Initializing {}".format(new_droid))
                 while True:
